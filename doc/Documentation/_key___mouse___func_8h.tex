@@ -1,0 +1,108 @@
+\section{Key\-\_\-\-Mouse\-\_\-\-Func.\-h File Reference}
+\label{_key___mouse___func_8h}\index{Key\-\_\-\-Mouse\-\_\-\-Func.\-h@{Key\-\_\-\-Mouse\-\_\-\-Func.\-h}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bf check\-\_\-selection} (float x, float y, int i)
+\item 
+void {\bf keyboard} (unsigned char key, int x, int y)
+\item 
+void {\bf special\-\_\-key} (int key, int x, int y)
+\item 
+void {\bf mouse} (int state, int button, int x, int y)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{Key\-\_\-\-Mouse\-\_\-\-Func.\-h@{Key\-\_\-\-Mouse\-\_\-\-Func.\-h}!check\-\_\-selection@{check\-\_\-selection}}
+\index{check\-\_\-selection@{check\-\_\-selection}!Key_Mouse_Func.h@{Key\-\_\-\-Mouse\-\_\-\-Func.\-h}}
+\subsubsection[{check\-\_\-selection}]{\setlength{\rightskip}{0pt plus 5cm}bool check\-\_\-selection (
+\begin{DoxyParamCaption}
+\item[{float}]{x, }
+\item[{float}]{y, }
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)}\label{_key___mouse___func_8h_a25a1aff3feb7bd0f7f8066853c2f002f}
+Check Selecetion function 
+\begin{DoxyParams}{Parameters}
+{\em x} & \-: x co-\/ordinate of the mouse current location  y \-: y co-\/ordinate of the mouse current location \\
+\hline
+{\em i} & \-: circle index to check It checks whether the current mouse pointer co-\/ordinates lies over circle with index \char`\"{}i\char`\"{} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boolean result of the function 
+\end{DoxyReturn}
+
+
+Definition at line 14 of file Key\-\_\-\-Mouse\-\_\-\-Func.\-h.
+
+\index{Key\-\_\-\-Mouse\-\_\-\-Func.\-h@{Key\-\_\-\-Mouse\-\_\-\-Func.\-h}!keyboard@{keyboard}}
+\index{keyboard@{keyboard}!Key_Mouse_Func.h@{Key\-\_\-\-Mouse\-\_\-\-Func.\-h}}
+\subsubsection[{keyboard}]{\setlength{\rightskip}{0pt plus 5cm}void keyboard (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{key, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}\label{_key___mouse___func_8h_aef7ba2f69afb2d954545f64c7fe24b14}
+Keyboard input function 
+\begin{DoxyParams}{Parameters}
+{\em key} & \-: input from the keyboard \\
+\hline
+{\em x} & \-: state command from open\-G\-L \\
+\hline
+{\em y} & \-: state command from open\-G\-L co-\/ordinates the user inputs throught the keyboard \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 30 of file Key\-\_\-\-Mouse\-\_\-\-Func.\-h.
+
+\index{Key\-\_\-\-Mouse\-\_\-\-Func.\-h@{Key\-\_\-\-Mouse\-\_\-\-Func.\-h}!mouse@{mouse}}
+\index{mouse@{mouse}!Key_Mouse_Func.h@{Key\-\_\-\-Mouse\-\_\-\-Func.\-h}}
+\subsubsection[{mouse}]{\setlength{\rightskip}{0pt plus 5cm}void mouse (
+\begin{DoxyParamCaption}
+\item[{int}]{state, }
+\item[{int}]{button, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}\label{_key___mouse___func_8h_a20305e36d4da3c307dcf7efe79a626f3}
+Mouse input function 
+\begin{DoxyParams}{Parameters}
+{\em state} & \-: state of the mouse click \\
+\hline
+{\em button} & \-: determines the selection of the button by the user \\
+\hline
+{\em x} & \-: state command from open\-G\-L \\
+\hline
+{\em y} & \-: state command from open\-G\-L co-\/ordinates the user inputs throught the mouse \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 101 of file Key\-\_\-\-Mouse\-\_\-\-Func.\-h.
+
+\index{Key\-\_\-\-Mouse\-\_\-\-Func.\-h@{Key\-\_\-\-Mouse\-\_\-\-Func.\-h}!special\-\_\-key@{special\-\_\-key}}
+\index{special\-\_\-key@{special\-\_\-key}!Key_Mouse_Func.h@{Key\-\_\-\-Mouse\-\_\-\-Func.\-h}}
+\subsubsection[{special\-\_\-key}]{\setlength{\rightskip}{0pt plus 5cm}void special\-\_\-key (
+\begin{DoxyParamCaption}
+\item[{int}]{key, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}\label{_key___mouse___func_8h_aba874a7126424042958892d84c5c8aa0}
+Keyboard input function 
+\begin{DoxyParams}{Parameters}
+{\em key} & \-: input from the keyboard \\
+\hline
+{\em x} & \-: state command from open\-G\-L \\
+\hline
+{\em y} & \-: state command from open\-G\-L co-\/ordinates the user inputs throught the keyboard for speed control \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 58 of file Key\-\_\-\-Mouse\-\_\-\-Func.\-h.
+

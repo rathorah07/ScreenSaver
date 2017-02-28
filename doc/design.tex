@@ -1,0 +1,176 @@
+% This document has been designed using Overleaf.com
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%University Assignment Title Page 
+% LaTeX Template
+% Version 1.0 (27/12/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% WikiBooks (http://en.wikibooks.org/wiki/LaTeX/Title_Creation)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+% 
+% Instructions for using this template:
+% This title page is capable of being compiled as is. This is not useful for 
+% including it in another document. To do this, you have two options: 
+%
+% 1) Copy/paste everything between \begin{document} and \end{document} 
+% starting at \begin{titlepage} and paste this into another LaTeX file where you 
+% want your title page.
+% OR
+% 2) Remove everything outside the \begin{titlepage} and \end{titlepage} and 
+% move this file to the same directory as the LaTeX file you wish to add it to. 
+% Then add \input{./title_page_1.tex} to your LaTeX file where you want your
+% title page.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\title{Title page with logo}
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[12pt]{article}
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\graphicspath{{C:\Users\Kartikay\Desktop}}
+
+\begin{document}
+
+\begin{titlepage}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+
+\center % Center everything on the page
+ 
+%----------------------------------------------------------------------------------------
+%	HEADING SECTIONS
+%----------------------------------------------------------------------------------------
+
+\textsc{\LARGE IIT Delhi}\\[1.0cm] % Name of your university/college
+\textsc{\Large COP 290 : Design Practices in Computer Science}\\[0.5cm] % Major heading such as course name
+\textsc{\large \textbf{Assignment 1 : Screen Saver}}\\[0.5cm] % Minor heading such as course title
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\HRule \\[0.4cm]
+{ \huge \bfseries Changes in Design }\\[0.4cm] % Title of your document
+\HRule \\[1.5cm]
+ 
+%----------------------------------------------------------------------------------------
+%	AUTHOR SECTION
+%----------------------------------------------------------------------------------------
+
+%\begin{minipage}{0.4\textwidth}
+%\begin{flushleft} \large
+\emph{\textbf{Authors:}}\\
+\textbf{Anmol Sood - 2013MT60587}  % Your name
+\\
+\textbf{Kartikay Garg - 2013MT60600} % Your name
+\\
+\textbf{Rahul Kumar Rathore - 2013MT60610}  % Your name
+
+%\end{flushleft}
+%\end{minipage}
+%\begin{minipage}{0.4\textwidth}
+
+%\begin{flushright} \large
+
+%\emph{Supervisors:} \\
+%\textbf{Prof. Huzur Saran} 
+%\textbf{Prof. Kolin Paul} % Supervisor's Name
+%\end{flushright}
+%\end{minipage}\\[2cm]
+
+% If you don't want a supervisor, uncomment the two lines below and remove the section above
+%\Large \emph{Author:}\\
+%John \textsc{Smith}\\[3cm] % Your name
+
+%----------------------------------------------------------------------------------------
+%	DATE SECTION
+%----------------------------------------------------------------------------------------
+\vspace{60mm}
+
+{\large January 25,2015}\\[2cm] % Date, change the \today to a set date if you want to be precise
+
+%----------------------------------------------------------------------------------------
+%	LOGO SECTION
+%----------------------------------------------------------------------------------------
+%
+%\includegraphics{iitd_logo}\\[1cm] % Include a department/university logo - this will require the graphicx package
+ 
+
+%----------------------------------------------------------------------------------------
+
+\vfill % Fill the rest of the page with whitespace
+
+\end{titlepage}
+
+
+\begin{abstract}
+The documents concentrates over the changes that we have made in the design of the final program than that submitted earlier and the reasons why they were brought. 
+\end{abstract}
+
+\section{Physics}
+
+In the design that we presented earlier, we used equations of collision in the scalar form to compute the final velocities of the balls in the X and Y directions. The scalar equations are as follows :
+\\
+Let 
+\\$u_1$ : initial velocity of ball 1
+\\$u_2$ : initial velocity of ball 2
+\\$\theta_1$ : angle that ball 1 makes with the horizontal before the collision
+\\$\theta_2$ : angle that ball 2 makes with the horizontal before the collision
+\\$\phi$ : contact angle between the balls
+\\
+$v_x, v_y $ denote the final velocities of ball 1 after collision in X and Y directions respectively
+\\
+Then on solving the equations of conservation of momentum in the two dimensions we get : 
+
+$$v_x = u_2\cos(\theta_2 - \phi)\cos(\phi) - u_1\sin(\theta_1 - \phi)\sin(\phi) $$
+$$v_y = u_2\cos(\theta_2 - \phi)\sin(\phi) + u_1\sin(\theta_1 - \phi)\ cos(\phi)$$
+\\
+To get the final velocities in the X and the Y direction of ball 2, swap the subscripts of the $\theta$s.
+\\But while writing the program, we realized that these equations are effective in providing the scalar values of the final velocities of the balls but very inefficient in determining their final directions after the collision. Thus we had to avert to a more general approach of vectors which could effectively model collisions in even higher dimensions. The equations used in the vector approach are as follows :
+\\Let
+\\$\vec{u_1}$ : initial velocity vector of ball 1
+\\$\vec{u_2}$ : initial velocity vector of ball 2
+\\$\vec{n}$ : unit vector along the line joining the centers of the two balls
+\\$\vec{t}$ : unit vector along the tangential direction of the collision
+\\$\vec{v_1}$ : final velocity vector of ball 1
+\\$\vec{v_2}$ : final velocity vector of ball 2
+\\Then on solving the equations of conservation of momentum and coefficient of restitution equation, we get :
+
+$$\vec{v_1} = (\vec{u_1}.\vec{t})\vec{t} + (\frac{\vec{u_1}(m_1 - m_2) + 2\vec{u_2}.m_2}{m_1 + m_2})\vec{n} $$
+
+
+$$\vec{v_2} = (\vec{u_2}.\vec{t})\vec{t} + (\frac{\vec{u_2}(m_2 - m_1) + 2\vec{u_1}.m_1}{m_1 + m_2})\vec{n} $$
+
+\section{Thread Synchronization}
+
+We have switched to a barrier model instead of a one-to-one synchronization model because of failures in designing and implementing a secure one-to-one model.
+\\Mutex variables have been used to implement a barrier model along with message queue. Each thread checks for possible collisions with all other threads whose entries are already there in the message queue. A mutex variable blocks the control during this time so that the queue remains static for each thread. After the checks are completed , the mutex variable is unlocked and the entry for the thread is made in the queue when it is running again.
+
+
+
+\section{GUI}
+In the design we presented earlier, we did not give a precise description of how the speed control will function. Here, we give the complete implementation of the speed control feature of the ball.
+\begin{description}
+\item[$\cdot$]If the user wishes to change the speed of a ball, she should first pause the entire system. The system can be paused by either\textbf{ pressing space bar} on the keyboard or by clicking the \textbf{right button} of the mouse any where on the screen and then selecting\textbf{ "Pause/Play"} from the drop down menu. Once the entire system is paused, the user should click over the ball to select it, then increase or decrease speed accordingly using the UP and DOWN keys on the keyboard.
+
+\item[$\cdot$]We have also added a menu bar in the interface that keeps tracks of the activities of the user. This menu bar depicts whether the user has currently selected a ball or not and if so,then what are co-ordinates, and velocities in the X and Y directions of the selected ball.
+
+\item[$\cdot$]We have also added extra features of adding or removing a ball from the system. To use feature, the user must first pause the system. Then, if the user wishes to add a ball, she should \textbf{left click} over the place where she wishes to add the ball, then \textbf{right click} over there and select \textbf{"Add a Ball"} from the drop down menu. This adds a new ball with the center at the position of the mouse click and a random radius to adjust according to the system. 
+
+\item[$\cdot$]In a similar way, the user can also remove a ball from the system.
+\\\textbf{Note :} A ball is not removed if it is not selected.
+\end{description}
+
+\end{document} 

@@ -1,0 +1,68 @@
+README
+
+I. File list
+------------
+
+code/Circle.cpp 	: Contains all function definitions of the Circle Class
+code/main.cpp 		: Main Function.
+code/Vector.cpp		: Contains functions of the Vector Class.
+code/Variable.h		: Consists declaration of all the global variable used in the main program
+code/Collison.cpp	: Contains the function that handles collisions between the balls
+code/Display.cpp    	: Contains the function that displays the screen and all its components
+code/Menu.cpp   	: Contains the function that handles the drop down menu system of the GUI
+code/Key_Mouse_Func.cpp	: Contains the functions that handle the input from the user via keyboard and mouse
+Changes			: List of all Changes from the Design Document Submitted earlier
+Makefile		: Makefile
+README			: README file
+
+
+Program can be built using default make arguments.
+
+II. Design
+----------
+
+A. Graphics
+OpenGL API along with GLUT and freeglut has been used to render graphics.
+
+B. Concurrency
+Pthreads have been used to make threads. The project follows a 1 thread per ball model. Barriers via mutex variables have been used for synchronization.
+
+C. Physics
+All collision have been considered to be perfectly elastic and vector equations for elastic collisions have been used to handle collisions.
+Collisions are checked for those balls who are approaching each other at each frame.
+
+D. Additional Features
+i) Pause/Play.
+ii) Speed Control of a Ball.
+iii) Change Colour of a Ball.
+iv) Add/Remove a Ball.
+The additional features are discussed in detail in the subsequent How to Use Section
+
+All design decisions have been discussed in detail in the Design Document. Any changes from the Design Document are mentioned in the Changes Document.
+
+III. How to Use
+
+To start the application, the following make targets can be used on the commandline (in the directory containing the Makefile)
+i) make execute NUM_THREADS=n 	: n is the Number of Balls desired by the used. Default value for n is 5. n should be <=100. This launches the full screen wallpaper application.
+ii)make DEBUG NUM_THREADS=n     : n is the Number of Balls desired by the used. Default value for n is 5. n should be <=100. This
+					launches an application along with verbose output for various processes in the animation
+iii)make doc			: this launches the complilation of the latex source files in the document
+
+iv)make document    		: this launhces the compilation of latex source files created by doxygen
+
+
+Once, the application is launched, n randomnly coloured balls moving with random velocities appear on a black background with a menu bar on the top of the screen.
+The user has the following GUI Based Options :
+i) Pause/Play : The user can press the spacebar key to pause/play the animation. The user can also pause/play from the menu that appears on a right click on the screen.
+ii) Speed Control of a Ball	 : Once the animation is paused, the user has an option to change speed of a ball under the limits of a predefined minimum  and maximum. This can be done by clicking on the ball and using the Up/Down Arrow keys.
+iii) Change Colour of a Ball 	: Once the animation is paused , the user can right click on a ball and select the change colour option from screen.
+iv) Add/Remove a Ball 	     	: When the animation is paused , the user can left click at any point of the screen and then right clicking the screen gives an option to add a ball of a random radius if it is possible to do so. Right clicking on a ball gives the user the option to remove it from the screen.
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+All rights reserved. Project Designed for Assignment 1 COP290 : Design Practices in Computer Science.
+Authors : 	Rahul Kumar Rathore (2013MT60610)
+		Anmol Sood 	      (2013MT60587)
+		Kartikay Garg       (2013MT60600)
+Last Updated : 25th January,2015
+----------------------------------------------------------------------------------------------------------------------------------------------

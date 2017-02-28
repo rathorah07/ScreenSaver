@@ -1,0 +1,167 @@
+\section{Circle Class Reference}
+\label{class_circle}\index{Circle@{Circle}}
+
+
+{\ttfamily \#include $<$Circle.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Circle} ()
+\item 
+void {\bf speed\-\_\-up} ()
+\item 
+void {\bf speed\-\_\-down} ()
+\item 
+void {\bf create\-\_\-circle} ()
+\item 
+void {\bf move\-\_\-circle} (int {\bf Width}, int {\bf Height})
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float {\bf pos} [2]
+\item 
+float {\bf vel} [2]
+\item 
+float {\bf radius}
+\item 
+float {\bf color} [3]
+\item 
+float {\bf mass}
+\item 
+float {\bf para}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\doxyref{Circle}{p.}{class_circle} class This class brings out most of the features of the program. It is responsible for creating the balls, moving them, speeding them up and down and most importantly assigning them random co-\/ordinates of the centre, velocities and radius at the begining of the program. 
+
+Definition at line 9 of file Circle.\-h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Circle@{Circle}!Circle@{Circle}}
+\index{Circle@{Circle}!Circle@{Circle}}
+\subsubsection[{Circle}]{\setlength{\rightskip}{0pt plus 5cm}Circle\-::\-Circle (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_circle_ad1ecfcfc7bf34529c6a6d6c448bf70fe}
+Member functions of the class Constructor of the class This constructor assigns random co-\/ordinates of the centre, velocities, radius, mass(propotional to the radius) to the circle constrained under certain boundary conditions as described later 
+
+Definition at line 12 of file Circle.\-cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{Circle@{Circle}!create\-\_\-circle@{create\-\_\-circle}}
+\index{create\-\_\-circle@{create\-\_\-circle}!Circle@{Circle}}
+\subsubsection[{create\-\_\-circle}]{\setlength{\rightskip}{0pt plus 5cm}void Circle\-::create\-\_\-circle (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_circle_abbcb19219672634738c50a79d95b23c9}
+Create circle function It create a circle on the screen display in accordance to the current values of the co-\/ordinates of the centre of the circle 
+
+Definition at line 85 of file Circle.\-cpp.
+
+\index{Circle@{Circle}!move\-\_\-circle@{move\-\_\-circle}}
+\index{move\-\_\-circle@{move\-\_\-circle}!Circle@{Circle}}
+\subsubsection[{move\-\_\-circle}]{\setlength{\rightskip}{0pt plus 5cm}void Circle\-::move\-\_\-circle (
+\begin{DoxyParamCaption}
+\item[{int}]{Width, }
+\item[{int}]{Height}
+\end{DoxyParamCaption}
+)}\label{class_circle_aae51506bc790e1b62e0f5c91650cfa44}
+Move circle function It is responsible for checking if the circle undergoes collision with the walls of the display screen 
+\begin{DoxyParams}{Parameters}
+{\em Width} & \-: width of the display screen \\
+\hline
+{\em Height} & \-: height of the display screen \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 103 of file Circle.\-cpp.
+
+\index{Circle@{Circle}!speed\-\_\-down@{speed\-\_\-down}}
+\index{speed\-\_\-down@{speed\-\_\-down}!Circle@{Circle}}
+\subsubsection[{speed\-\_\-down}]{\setlength{\rightskip}{0pt plus 5cm}void Circle\-::speed\-\_\-down (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_circle_a19e3b664c4f3984273644c1b30b04f98}
+Speed Down function It decreases the speed of the circle as and when the user call for it. This function decreases the speed of the circle in both the X and Y directions uniformly under predefined minimums \begin{DoxySeeAlso}{See Also}
+\doxyref{vel}{p.}{class_circle_a682dbbb539288ce2cc343ca485a7c111} 
+\end{DoxySeeAlso}
+
+
+Definition at line 54 of file Circle.\-cpp.
+
+\index{Circle@{Circle}!speed\-\_\-up@{speed\-\_\-up}}
+\index{speed\-\_\-up@{speed\-\_\-up}!Circle@{Circle}}
+\subsubsection[{speed\-\_\-up}]{\setlength{\rightskip}{0pt plus 5cm}void Circle\-::speed\-\_\-up (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_circle_ad0cff3feb822c413024a87d490de7a36}
+Speed Up function It increases the speed of the circle as and when the user calls for it. This function increases the speed of the circle in both the X and Y directions uniformly under predefined maximums \begin{DoxySeeAlso}{See Also}
+\doxyref{vel}{p.}{class_circle_a682dbbb539288ce2cc343ca485a7c111} 
+\end{DoxySeeAlso}
+
+
+Definition at line 23 of file Circle.\-cpp.
+
+
+
+\subsection{Member Data Documentation}
+\index{Circle@{Circle}!color@{color}}
+\index{color@{color}!Circle@{Circle}}
+\subsubsection[{color}]{\setlength{\rightskip}{0pt plus 5cm}float Circle\-::color[3]}\label{class_circle_a2f03beca97879e29032e5e96e607c374}
+determines the color that is assigned to the circle 
+
+Definition at line 18 of file Circle.\-h.
+
+\index{Circle@{Circle}!mass@{mass}}
+\index{mass@{mass}!Circle@{Circle}}
+\subsubsection[{mass}]{\setlength{\rightskip}{0pt plus 5cm}float Circle\-::mass}\label{class_circle_a355debcc715ea2c91e20dcfa83f9c45e}
+determines mass of the circle that is propotional to the radius of the circle 
+
+Definition at line 19 of file Circle.\-h.
+
+\index{Circle@{Circle}!para@{para}}
+\index{para@{para}!Circle@{Circle}}
+\subsubsection[{para}]{\setlength{\rightskip}{0pt plus 5cm}float Circle\-::para}\label{class_circle_a1e9746696e2043638504b686d4d7a43f}
+a speed parameter 
+
+Definition at line 20 of file Circle.\-h.
+
+\index{Circle@{Circle}!pos@{pos}}
+\index{pos@{pos}!Circle@{Circle}}
+\subsubsection[{pos}]{\setlength{\rightskip}{0pt plus 5cm}float Circle\-::pos[2]}\label{class_circle_a15d7651d7677635e50bdfa3372097b07}
+Variable members of the classdetermines the co-\/ordinates of the centre of the circle 
+
+Definition at line 15 of file Circle.\-h.
+
+\index{Circle@{Circle}!radius@{radius}}
+\index{radius@{radius}!Circle@{Circle}}
+\subsubsection[{radius}]{\setlength{\rightskip}{0pt plus 5cm}float Circle\-::radius}\label{class_circle_a47644132ec8bec0f3a4e8d0e15bcd5d3}
+determines the radius of the circle 
+
+Definition at line 17 of file Circle.\-h.
+
+\index{Circle@{Circle}!vel@{vel}}
+\index{vel@{vel}!Circle@{Circle}}
+\subsubsection[{vel}]{\setlength{\rightskip}{0pt plus 5cm}float Circle\-::vel[2]}\label{class_circle_a682dbbb539288ce2cc343ca485a7c111}
+determines the components of the velocities of the circle in the X and the Y directions 
+
+Definition at line 16 of file Circle.\-h.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+{\bf Circle.\-h}\item 
+{\bf Circle.\-cpp}\end{DoxyCompactItemize}

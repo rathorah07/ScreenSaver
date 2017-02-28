@@ -1,0 +1,177 @@
+\section{Vector Class Reference}
+\label{class_vector}\index{Vector@{Vector}}
+
+
+{\ttfamily \#include $<$Vector.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Vector} ()
+\item 
+{\bf Vector} (float x, float y)
+\item 
+{\bf Vector} {\bf addition} ({\bf Vector} \&vector2)
+\item 
+{\bf Vector} {\bf scalar\-\_\-multiplication} (float scalar)
+\item 
+{\bf Vector} {\bf subtraction} ({\bf Vector} \&vector2)
+\item 
+float {\bf scalar\-\_\-product} ({\bf Vector} \&vector2)
+\item 
+{\bf Vector} {\bf unit\-\_\-vector} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float $\ast$ {\bf \-\_\-vector}
+\item 
+int {\bf length}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\doxyref{Vector}{p.}{class_vector} class This class os responsible for computing if a collision happens between two balls. It is class that defines vectors and allows us the use basic vector operations such as addition, subtraction, scalar multiplication, scalar product between two vectors and calculating unit vectors in given direction. 
+
+Definition at line 8 of file Vector.\-h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Vector@{Vector}!Vector@{Vector}}
+\index{Vector@{Vector}!Vector@{Vector}}
+\subsubsection[{Vector}]{\setlength{\rightskip}{0pt plus 5cm}Vector\-::\-Vector (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_vector_a6f80c73b5f18dcf3f8e36065bdc8b9e5}
+Member functions of the class Constructor of the class It initializes a new vector of dimension 2 
+
+Definition at line 9 of file Vector.\-cpp.
+
+\index{Vector@{Vector}!Vector@{Vector}}
+\index{Vector@{Vector}!Vector@{Vector}}
+\subsubsection[{Vector}]{\setlength{\rightskip}{0pt plus 5cm}Vector\-::\-Vector (
+\begin{DoxyParamCaption}
+\item[{float}]{x, }
+\item[{float}]{y}
+\end{DoxyParamCaption}
+)}\label{class_vector_a7b248851572c39229270f04c3dd192d8}
+Another constructor of the class 
+\begin{DoxyParams}{Parameters}
+{\em x} & \-: co-\/ordinate of the vector in the X dimension \\
+\hline
+{\em y} & \-: co-\/ordinate of the vector in the Y dimension It initializes a new vector of dimension 2 with the given co-\/ordinates in the X and Y dimension \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 16 of file Vector.\-cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{Vector@{Vector}!addition@{addition}}
+\index{addition@{addition}!Vector@{Vector}}
+\subsubsection[{addition}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector} Vector\-::addition (
+\begin{DoxyParamCaption}
+\item[{{\bf Vector} \&}]{vector2}
+\end{DoxyParamCaption}
+)}\label{class_vector_aa4a47d23dd066ccabf62cabf51a723d4}
+Addition 
+\begin{DoxyParams}{Parameters}
+{\em vector2} & \-: vector to be added to the vector corresponding to the given vector object defines commponent wise addition of given 2 vectors \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 23 of file Vector.\-cpp.
+
+\index{Vector@{Vector}!scalar\-\_\-multiplication@{scalar\-\_\-multiplication}}
+\index{scalar\-\_\-multiplication@{scalar\-\_\-multiplication}!Vector@{Vector}}
+\subsubsection[{scalar\-\_\-multiplication}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector} Vector\-::scalar\-\_\-multiplication (
+\begin{DoxyParamCaption}
+\item[{float}]{scalar}
+\end{DoxyParamCaption}
+)}\label{class_vector_a75c32ae25d7ce8a6a3b36f200968793f}
+Multiplication with a scalar 
+\begin{DoxyParams}{Parameters}
+{\em scalar} & \-: scalar to be multiplied to the vector corresponging to the given vector object defines multiplication of a scalar with a given vector \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 31 of file Vector.\-cpp.
+
+\index{Vector@{Vector}!scalar\-\_\-product@{scalar\-\_\-product}}
+\index{scalar\-\_\-product@{scalar\-\_\-product}!Vector@{Vector}}
+\subsubsection[{scalar\-\_\-product}]{\setlength{\rightskip}{0pt plus 5cm}float Vector\-::scalar\-\_\-product (
+\begin{DoxyParamCaption}
+\item[{{\bf Vector} \&}]{vector2}
+\end{DoxyParamCaption}
+)}\label{class_vector_ac166fab748701edd35b40e6e29f66d6c}
+Scalar product of two vectors 
+\begin{DoxyParams}{Parameters}
+{\em vector2} & \-: determines the vector whose scalar product is ti be calculated with the vector corresponding to the given vector object defines dot product between two given vectors \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the result of the scalar product 
+\end{DoxyReturn}
+
+
+Definition at line 35 of file Vector.\-cpp.
+
+\index{Vector@{Vector}!subtraction@{subtraction}}
+\index{subtraction@{subtraction}!Vector@{Vector}}
+\subsubsection[{subtraction}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector} Vector\-::subtraction (
+\begin{DoxyParamCaption}
+\item[{{\bf Vector} \&}]{vector2}
+\end{DoxyParamCaption}
+)}\label{class_vector_aed3857bb3691f9f0f14e6b6dd1aa0b9c}
+Subtraction 
+\begin{DoxyParams}{Parameters}
+{\em vector2} & \-: determines the vector which is to be subtracted from the vector corresponding to the given vector object defines component wise subctraction of given two vectors \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 27 of file Vector.\-cpp.
+
+\index{Vector@{Vector}!unit\-\_\-vector@{unit\-\_\-vector}}
+\index{unit\-\_\-vector@{unit\-\_\-vector}!Vector@{Vector}}
+\subsubsection[{unit\-\_\-vector}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector} Vector\-::unit\-\_\-vector (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_vector_abadc2e5aa7c651b5c2b7bea292eda35a}
+Unit vector determines the unit vector in the direction of the given vector object \begin{DoxyReturn}{Returns}
+the unit vector in the reqiured direction 
+\end{DoxyReturn}
+
+
+Definition at line 40 of file Vector.\-cpp.
+
+
+
+\subsection{Member Data Documentation}
+\index{Vector@{Vector}!\-\_\-vector@{\-\_\-vector}}
+\index{\-\_\-vector@{\-\_\-vector}!Vector@{Vector}}
+\subsubsection[{\-\_\-vector}]{\setlength{\rightskip}{0pt plus 5cm}float$\ast$ Vector\-::\-\_\-vector}\label{class_vector_af57df1951915e9b59eeba2fff0a555bc}
+Variable members of the classarray of co-\/ordinates in different dimensions 
+
+Definition at line 12 of file Vector.\-h.
+
+\index{Vector@{Vector}!length@{length}}
+\index{length@{length}!Vector@{Vector}}
+\subsubsection[{length}]{\setlength{\rightskip}{0pt plus 5cm}int Vector\-::length}\label{class_vector_a5aaac72236e7171c909342682c2c516c}
+number of dimensions of the vector 
+
+Definition at line 13 of file Vector.\-h.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+{\bf Vector.\-h}\item 
+{\bf Vector.\-cpp}\end{DoxyCompactItemize}

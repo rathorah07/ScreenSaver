@@ -1,0 +1,268 @@
+\section{Variable.\-h File Reference}
+\label{_variable_8h}\index{Variable.\-h@{Variable.\-h}}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bf P\-I}~3.\-1415926535898
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bf M\-E\-N\-U\-\_\-\-T\-Y\-P\-E} \{ {\bf M\-E\-N\-U\-\_\-\-F\-R\-O\-N\-T}, 
+{\bf M\-E\-N\-U\-\_\-\-S\-P\-O\-T}, 
+{\bf M\-E\-N\-U\-\_\-\-B\-A\-C\-K\-\_\-\-R\-I\-G\-H\-T}, 
+{\bf M\-E\-N\-U\-\_\-\-B\-A\-C\-K\-\_\-\-L\-E\-F\-T}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf I\-N\-I\-T\-I\-A\-L\-I\-Z\-E\-\_\-\-G\-L\-O\-B\-A\-L\-\_\-\-M\-E\-M\-O\-R\-Y} ()
+\item 
+void {\bf Initcircle} ({\bf Circle} \&in\-\_\-circle)
+\item 
+void $\ast$ {\bf thread\-\_\-func} (void $\ast$arg)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int {\bf num\-\_\-balls} = 5
+\item 
+queue$<$ int $>$ {\bf mein}
+\item 
+queue$<$ int $>$ {\bf meout}
+\item 
+bool {\bf paused} = false
+\item 
+bool {\bf ball\-\_\-selected} = false
+\item 
+int {\bf ball\-\_\-speed\-\_\-index} = -\/1
+\item 
+std\-::vector$<$ pthread\-\_\-t $>$ {\bf thread}
+\item 
+std\-::vector$<$ {\bf Circle} $>$ {\bf circle}
+\item 
+pthread\-\_\-mutex\-\_\-t {\bf lock} = P\-T\-H\-R\-E\-A\-D\-\_\-\-M\-U\-T\-E\-X\-\_\-\-I\-N\-I\-T\-I\-A\-L\-I\-Z\-E\-R
+\item 
+pthread\-\_\-mutex\-\_\-t {\bf lock2} = P\-T\-H\-R\-E\-A\-D\-\_\-\-M\-U\-T\-E\-X\-\_\-\-I\-N\-I\-T\-I\-A\-L\-I\-Z\-E\-R
+\item 
+int {\bf Width} = 600.\-0
+\item 
+int {\bf Height} = 600.\-0
+\item 
+int {\bf counter} = 0
+\item 
+float {\bf mouse\-\_\-x}
+\item 
+float {\bf mouse\-\_\-y}
+\item 
+{\bf M\-E\-N\-U\-\_\-\-T\-Y\-P\-E} {\bf show} = {\bf M\-E\-N\-U\-\_\-\-B\-A\-C\-K\-\_\-\-R\-I\-G\-H\-T}
+\begin{DoxyCompactList}\small\item\em Assign a default value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{Variable.\-h@{Variable.\-h}!P\-I@{P\-I}}
+\index{P\-I@{P\-I}!Variable.h@{Variable.\-h}}
+\subsubsection[{P\-I}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-I~3.\-1415926535898}\label{_variable_8h_a598a3330b3c21701223ee0ca14316eca}
+
+
+Definition at line 1 of file Variable.\-h.
+
+
+
+\subsection{Enumeration Type Documentation}
+\index{Variable.\-h@{Variable.\-h}!M\-E\-N\-U\-\_\-\-T\-Y\-P\-E@{M\-E\-N\-U\-\_\-\-T\-Y\-P\-E}}
+\index{M\-E\-N\-U\-\_\-\-T\-Y\-P\-E@{M\-E\-N\-U\-\_\-\-T\-Y\-P\-E}!Variable.h@{Variable.\-h}}
+\subsubsection[{M\-E\-N\-U\-\_\-\-T\-Y\-P\-E}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf M\-E\-N\-U\-\_\-\-T\-Y\-P\-E}}\label{_variable_8h_a0de0e072620e775fe9c75d3d5e117900}
+An Enumneration of the Menu \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{M\-E\-N\-U\-\_\-\-F\-R\-O\-N\-T@{M\-E\-N\-U\-\_\-\-F\-R\-O\-N\-T}!Variable.\-h@{Variable.\-h}}\index{Variable.\-h@{Variable.\-h}!M\-E\-N\-U\-\_\-\-F\-R\-O\-N\-T@{M\-E\-N\-U\-\_\-\-F\-R\-O\-N\-T}}\item[{\em 
+M\-E\-N\-U\-\_\-\-F\-R\-O\-N\-T\label{_variable_8h_a0de0e072620e775fe9c75d3d5e117900a37afbf5c6a28e443c2937f536ca0c41a}
+}]\index{M\-E\-N\-U\-\_\-\-S\-P\-O\-T@{M\-E\-N\-U\-\_\-\-S\-P\-O\-T}!Variable.\-h@{Variable.\-h}}\index{Variable.\-h@{Variable.\-h}!M\-E\-N\-U\-\_\-\-S\-P\-O\-T@{M\-E\-N\-U\-\_\-\-S\-P\-O\-T}}\item[{\em 
+M\-E\-N\-U\-\_\-\-S\-P\-O\-T\label{_variable_8h_a0de0e072620e775fe9c75d3d5e117900a9a7f2d6970500275fa28de339e23224d}
+}]\index{M\-E\-N\-U\-\_\-\-B\-A\-C\-K\-\_\-\-R\-I\-G\-H\-T@{M\-E\-N\-U\-\_\-\-B\-A\-C\-K\-\_\-\-R\-I\-G\-H\-T}!Variable.\-h@{Variable.\-h}}\index{Variable.\-h@{Variable.\-h}!M\-E\-N\-U\-\_\-\-B\-A\-C\-K\-\_\-\-R\-I\-G\-H\-T@{M\-E\-N\-U\-\_\-\-B\-A\-C\-K\-\_\-\-R\-I\-G\-H\-T}}\item[{\em 
+M\-E\-N\-U\-\_\-\-B\-A\-C\-K\-\_\-\-R\-I\-G\-H\-T\label{_variable_8h_a0de0e072620e775fe9c75d3d5e117900a881d2226eb44c2c2bb10a0512007980f}
+}]\index{M\-E\-N\-U\-\_\-\-B\-A\-C\-K\-\_\-\-L\-E\-F\-T@{M\-E\-N\-U\-\_\-\-B\-A\-C\-K\-\_\-\-L\-E\-F\-T}!Variable.\-h@{Variable.\-h}}\index{Variable.\-h@{Variable.\-h}!M\-E\-N\-U\-\_\-\-B\-A\-C\-K\-\_\-\-L\-E\-F\-T@{M\-E\-N\-U\-\_\-\-B\-A\-C\-K\-\_\-\-L\-E\-F\-T}}\item[{\em 
+M\-E\-N\-U\-\_\-\-B\-A\-C\-K\-\_\-\-L\-E\-F\-T\label{_variable_8h_a0de0e072620e775fe9c75d3d5e117900aebf6a300f5d578e87ec597fa2f26a224}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 33 of file Variable.\-h.
+
+
+
+\subsection{Function Documentation}
+\index{Variable.\-h@{Variable.\-h}!Initcircle@{Initcircle}}
+\index{Initcircle@{Initcircle}!Variable.h@{Variable.\-h}}
+\subsubsection[{Initcircle}]{\setlength{\rightskip}{0pt plus 5cm}void Initcircle (
+\begin{DoxyParamCaption}
+\item[{{\bf Circle} \&}]{in\-\_\-circle}
+\end{DoxyParamCaption}
+)}\label{_variable_8h_a193a5c9fc1f5d42c3dc2a6973d53f064}
+prototypes of vatious function described later
+
+Initialise a newly created circle in free space
+
+
+\begin{DoxyParams}{Parameters}
+{\em Refernce} & to a \doxyref{Circle}{p.}{class_circle} Input \doxyref{Circle}{p.}{class_circle} is given a randomize velocity , mass , location to free space , mass ,Color. \\
+\hline
+\end{DoxyParams}
+variables to give positive or negative velocity
+
+randomize velocity from (0,11$\ast$para)
+
+randomize color components from (0,0.\-9) 
+
+Definition at line 143 of file main.\-cpp.
+
+\index{Variable.\-h@{Variable.\-h}!I\-N\-I\-T\-I\-A\-L\-I\-Z\-E\-\_\-\-G\-L\-O\-B\-A\-L\-\_\-\-M\-E\-M\-O\-R\-Y@{I\-N\-I\-T\-I\-A\-L\-I\-Z\-E\-\_\-\-G\-L\-O\-B\-A\-L\-\_\-\-M\-E\-M\-O\-R\-Y}}
+\index{I\-N\-I\-T\-I\-A\-L\-I\-Z\-E\-\_\-\-G\-L\-O\-B\-A\-L\-\_\-\-M\-E\-M\-O\-R\-Y@{I\-N\-I\-T\-I\-A\-L\-I\-Z\-E\-\_\-\-G\-L\-O\-B\-A\-L\-\_\-\-M\-E\-M\-O\-R\-Y}!Variable.h@{Variable.\-h}}
+\subsubsection[{I\-N\-I\-T\-I\-A\-L\-I\-Z\-E\-\_\-\-G\-L\-O\-B\-A\-L\-\_\-\-M\-E\-M\-O\-R\-Y}]{\setlength{\rightskip}{0pt plus 5cm}void I\-N\-I\-T\-I\-A\-L\-I\-Z\-E\-\_\-\-G\-L\-O\-B\-A\-L\-\_\-\-M\-E\-M\-O\-R\-Y (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{_variable_8h_a9e04f4e1f9b953de6b1eaff5d110babc}
+Initialize function It intializes all the global variables that were not intialized earliar 
+
+Definition at line 24 of file Variable.\-h.
+
+\index{Variable.\-h@{Variable.\-h}!thread\-\_\-func@{thread\-\_\-func}}
+\index{thread\-\_\-func@{thread\-\_\-func}!Variable.h@{Variable.\-h}}
+\subsubsection[{thread\-\_\-func}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ thread\-\_\-func (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{arg}
+\end{DoxyParamCaption}
+)}\label{_variable_8h_a40fb82bbe3ba52f3e93882d723826617}
+Maintain balls by threads
+
+
+\begin{DoxyParams}{Parameters}
+{\em arg} & a void$\ast$ pointer Input is a pointer to the index of ball in the vector array. Check collison for given ball and move and update its velocity. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 100 of file main.\-cpp.
+
+
+
+\subsection{Variable Documentation}
+\index{Variable.\-h@{Variable.\-h}!ball\-\_\-selected@{ball\-\_\-selected}}
+\index{ball\-\_\-selected@{ball\-\_\-selected}!Variable.h@{Variable.\-h}}
+\subsubsection[{ball\-\_\-selected}]{\setlength{\rightskip}{0pt plus 5cm}bool ball\-\_\-selected = false}\label{_variable_8h_a46a32c77bbd8788bc9e79a17e80fc977}
+boolean reqiured to whether a ball is currently selected on the screen 
+
+Definition at line 6 of file Variable.\-h.
+
+\index{Variable.\-h@{Variable.\-h}!ball\-\_\-speed\-\_\-index@{ball\-\_\-speed\-\_\-index}}
+\index{ball\-\_\-speed\-\_\-index@{ball\-\_\-speed\-\_\-index}!Variable.h@{Variable.\-h}}
+\subsubsection[{ball\-\_\-speed\-\_\-index}]{\setlength{\rightskip}{0pt plus 5cm}int ball\-\_\-speed\-\_\-index = -\/1}\label{_variable_8h_acd6c28c72e614dd7bd0f7d646e247083}
+determines which ball's speed is being controlled. Default is -\/1 
+
+Definition at line 7 of file Variable.\-h.
+
+\index{Variable.\-h@{Variable.\-h}!circle@{circle}}
+\index{circle@{circle}!Variable.h@{Variable.\-h}}
+\subsubsection[{circle}]{\setlength{\rightskip}{0pt plus 5cm}std \-:: vector$<${\bf Circle}$>$ circle}\label{_variable_8h_ac629f56d4e416ecb1f68889ba504db9f}
+global vector containg the objects of each ball currently on the screen 
+
+Definition at line 9 of file Variable.\-h.
+
+\index{Variable.\-h@{Variable.\-h}!counter@{counter}}
+\index{counter@{counter}!Variable.h@{Variable.\-h}}
+\subsubsection[{counter}]{\setlength{\rightskip}{0pt plus 5cm}int counter = 0}\label{_variable_8h_a617a47c70795bcff659815ad0efd2266}
+global counter required in initializing the complete system 
+
+Definition at line 15 of file Variable.\-h.
+
+\index{Variable.\-h@{Variable.\-h}!Height@{Height}}
+\index{Height@{Height}!Variable.h@{Variable.\-h}}
+\subsubsection[{Height}]{\setlength{\rightskip}{0pt plus 5cm}int Height = 600.\-0}\label{_variable_8h_aaadefba794062a2ca7e58ceb10b955a1}
+Height of the display screen 
+
+Definition at line 14 of file Variable.\-h.
+
+\index{Variable.\-h@{Variable.\-h}!lock@{lock}}
+\index{lock@{lock}!Variable.h@{Variable.\-h}}
+\subsubsection[{lock}]{\setlength{\rightskip}{0pt plus 5cm}pthread\-\_\-mutex\-\_\-t lock = P\-T\-H\-R\-E\-A\-D\-\_\-\-M\-U\-T\-E\-X\-\_\-\-I\-N\-I\-T\-I\-A\-L\-I\-Z\-E\-R}\label{_variable_8h_a0abaf4b5d42c4e5d19190035fade3599}
+Mutex Lock 1 
+
+Definition at line 11 of file Variable.\-h.
+
+\index{Variable.\-h@{Variable.\-h}!lock2@{lock2}}
+\index{lock2@{lock2}!Variable.h@{Variable.\-h}}
+\subsubsection[{lock2}]{\setlength{\rightskip}{0pt plus 5cm}pthread\-\_\-mutex\-\_\-t lock2 = P\-T\-H\-R\-E\-A\-D\-\_\-\-M\-U\-T\-E\-X\-\_\-\-I\-N\-I\-T\-I\-A\-L\-I\-Z\-E\-R}\label{_variable_8h_a24e51acd1b5184d5c17d7bfd735eba96}
+Mutex Lock 2 
+
+Definition at line 12 of file Variable.\-h.
+
+\index{Variable.\-h@{Variable.\-h}!mein@{mein}}
+\index{mein@{mein}!Variable.h@{Variable.\-h}}
+\subsubsection[{mein}]{\setlength{\rightskip}{0pt plus 5cm}queue$<$int$>$ mein}\label{_variable_8h_a8858635e89a9839c4a5b985d8f8b0440}
+number of balls on the screen as input by the user 
+
+Definition at line 2 of file Variable.\-h.
+
+\index{Variable.\-h@{Variable.\-h}!meout@{meout}}
+\index{meout@{meout}!Variable.h@{Variable.\-h}}
+\subsubsection[{meout}]{\setlength{\rightskip}{0pt plus 5cm}queue$<$int$>$ meout}\label{_variable_8h_a722ca1971d3a7af2f97f9a8f6ffcc41b}
+queues for effective sychronization among the threads 
+
+Definition at line 2 of file Variable.\-h.
+
+\index{Variable.\-h@{Variable.\-h}!mouse\-\_\-x@{mouse\-\_\-x}}
+\index{mouse\-\_\-x@{mouse\-\_\-x}!Variable.h@{Variable.\-h}}
+\subsubsection[{mouse\-\_\-x}]{\setlength{\rightskip}{0pt plus 5cm}float mouse\-\_\-x}\label{_variable_8h_aa926828e42a4354e2faea35e47d7d89b}
+x co-\/ordinate of the mouse pointer on the screen 
+
+Definition at line 16 of file Variable.\-h.
+
+\index{Variable.\-h@{Variable.\-h}!mouse\-\_\-y@{mouse\-\_\-y}}
+\index{mouse\-\_\-y@{mouse\-\_\-y}!Variable.h@{Variable.\-h}}
+\subsubsection[{mouse\-\_\-y}]{\setlength{\rightskip}{0pt plus 5cm}float mouse\-\_\-y}\label{_variable_8h_abba724b08de2339d16ff97d20fa1b462}
+y co-\/ordinate of the mouse pointer on the screen 
+
+Definition at line 17 of file Variable.\-h.
+
+\index{Variable.\-h@{Variable.\-h}!num\-\_\-balls@{num\-\_\-balls}}
+\index{num\-\_\-balls@{num\-\_\-balls}!Variable.h@{Variable.\-h}}
+\subsubsection[{num\-\_\-balls}]{\setlength{\rightskip}{0pt plus 5cm}int num\-\_\-balls = 5}\label{_variable_8h_ab279fd2731a7828f860dce97d80f559b}
+
+
+Definition at line 2 of file Variable.\-h.
+
+\index{Variable.\-h@{Variable.\-h}!paused@{paused}}
+\index{paused@{paused}!Variable.h@{Variable.\-h}}
+\subsubsection[{paused}]{\setlength{\rightskip}{0pt plus 5cm}bool paused = false}\label{_variable_8h_a1656129c4a4fd8809254194f08f0ac70}
+boolean required to determine the state of the Screen saver 
+
+Definition at line 5 of file Variable.\-h.
+
+\index{Variable.\-h@{Variable.\-h}!show@{show}}
+\index{show@{show}!Variable.h@{Variable.\-h}}
+\subsubsection[{show}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\-E\-N\-U\-\_\-\-T\-Y\-P\-E} show = {\bf M\-E\-N\-U\-\_\-\-B\-A\-C\-K\-\_\-\-R\-I\-G\-H\-T}}\label{_variable_8h_a276df0c03f273308c5b3006e22f7cbe0}
+
+
+Assign a default value. 
+
+
+
+Definition at line 42 of file Variable.\-h.
+
+\index{Variable.\-h@{Variable.\-h}!thread@{thread}}
+\index{thread@{thread}!Variable.h@{Variable.\-h}}
+\subsubsection[{thread}]{\setlength{\rightskip}{0pt plus 5cm}std \-:: vector$<$pthread\-\_\-t$>$ thread}\label{_variable_8h_a325b00661493cd99a4d115b1a03dbcbe}
+global vector of the threads controlling individual balls 
+
+Definition at line 8 of file Variable.\-h.
+
+\index{Variable.\-h@{Variable.\-h}!Width@{Width}}
+\index{Width@{Width}!Variable.h@{Variable.\-h}}
+\subsubsection[{Width}]{\setlength{\rightskip}{0pt plus 5cm}int Width = 600.\-0}\label{_variable_8h_abbe7749c3b402f7dfe64f936774cfcd4}
+Width of the display screen 
+
+Definition at line 13 of file Variable.\-h.
+
